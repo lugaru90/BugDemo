@@ -1,0 +1,22 @@
+<template name="buchungenCreate">
+
+	{{#autoForm collection="Buchungen" id="insertBuchungenForm" type="insert" class="main form"}}
+    <fieldset>
+      <legend>Neue Buchung</legend>
+      <div class="form-group">
+        <label class="control-label">Mieter</label>
+        {{> inputAutocomplete settings=settings id="mieterSuche" name='mieterSuche' class="form-control" placeholder=""}}
+        <span class="help-block"></span>
+      </div>
+      {{> afFieldInput name="mieterId" id="mieterId" type="hidden"}}
+      {{> afQuickField name='zimmerId'}}
+      {{> afQuickField name='anreise' id="anreise" data-date-format='L' }}
+      {{> afQuickField name='abreise' id="abreise" data-date-format='L' }}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Erstellen</button>
+  {{/autoForm}}
+</template>
+
+<template name="buchungSmall">
+    {{name}}
+</template>

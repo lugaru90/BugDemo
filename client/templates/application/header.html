@@ -1,0 +1,102 @@
+<template name="header">
+  <nav class="navbar navbar-default" role="navigation">
+
+
+
+          <div class="{{activeRouteClass 'home'}} menuItemFull" style="background-color:#34495E; color:white;">
+            <a href="{{pathFor 'home'}}">Start</a>
+          </div>
+
+          <div class="menueCategory" style="background-color:#54A6D1;color:white;">
+            <div class="menueCategoryHeader" style="background-color:#54A6D1;color:white;">Mieter</div>
+            <a href="{{pathFor 'mieterList'}}" class="menuItem" style="width:50%">
+              <div class="{{activeRouteClass 'mieterList'}} menuItemText" style="border-bottom:2px solid blue;">
+                Liste
+              </div>
+            </a>
+            <a href="{{pathFor 'mieterCreate'}}" class="menuItem" style="width:50%">
+              <div class="{{activeRouteClass 'mieterCreate'}} menuItemText" style="border-bottom:2px solid red;">
+                Neu
+              </div>
+            </a>
+          </div>
+
+          <div class="menueCategory" style="background-color:#16A085;color:white;">
+            <div class="menueCategoryHeader" style="background-color:#16A085;color:white;">Buchungen</div>
+            <a href="{{pathFor 'buchungenList'}}" class="menuItem" style="width:50%">
+              <div class="{{activeRouteClass 'buchungenList'}} menuItemText" style="border-bottom:2px solid blue;">
+                Liste
+              </div>
+            </a>
+            <a href="{{pathFor 'buchungenCreate'}}" class="menuItem" style="width:50%">
+              <div class="{{activeRouteClass 'buchungenCreate'}} menuItemText" style="border-bottom:2px solid red;">
+                Neu
+              </div>
+            </a>
+          </div>
+
+          <div class="menueCategory" style="background-color:#D82150;color:white;">
+            <div class="menueCategoryHeader" style="background-color:#D82150;color:white;">Rechnungen</div>
+            <a href="{{pathFor 'mieterList'}}" class="menuItem" style="width:33%">
+              <div class="{{activeRouteClass 'mieterList'}} menuItemText" style="border-bottom:2px solid blue;">
+                Liste
+              </div>
+            </a>
+            <a href="{{pathFor 'mieterCreate'}}" class="menuItem" style="width:34%">
+              <div class="{{activeRouteClass 'mieterCreate'}} menuItemText" style="border-bottom:2px solid green;">
+                Anst
+              </div>
+            </a>
+            <a href="{{pathFor 'mieterCreate'}}" class="menuItem" style="width:33%">
+              <div class="{{activeRouteClass 'mieterCreate'}} menuItemText" style="border-bottom:2px solid red;">
+                Neu
+              </div>
+            </a>
+          </div>
+
+          <div class="{{activeRouteClass 'mail'}} menuItemFull" style="background-color:#34495E; color:white;">
+            <a href="{{pathFor 'mail'}}">Email</a>
+          </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+
+
+  </nav>
+</template>
+
+<template name="headerOld">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">Hotel</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav">
+          <li class="{{activeRouteClass 'home'}}">
+            <a href="{{pathFor 'home'}}">Start</a>
+          </li>
+          <li class="{{activeRouteClass 'mieterList'}}">
+            <a href="{{pathFor 'mieterList'}}">Mieter</a>
+          </li>
+          <li class="{{activeRouteClass 'mieterCreate'}}">
+            <a href="{{pathFor 'mieterCreate'}}">Mieter erstellen</a>
+          </li>
+          <li class="{{activeRouteClass 'mail'}}">
+            <a href="{{pathFor 'mail'}}">Email</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
