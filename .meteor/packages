@@ -1,0 +1,32 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+ian:accounts-ui-bootstrap-3
+accounts-password
+sacha:spin
+iron:router
+mizzao:bootstrap-3
+underscore
+aldeed:tabular
+aldeed:autoform
+aldeed:collection2
+
+meteorhacks:npm
+
+
+npm-container
+percolate:synced-cron
+momentjs:moment
+mizzao:autocomplete
+aldeed:autoform-bs-datepicker
+rzymek:moment-locale-de
+natestrauser:select2
+aldeed:autoform-select2
+zimme:select2-bootstrap3-css
+comerc:bs-datetimepicker
+tsega:bootstrap3-datetimepicker
+mrt:moment-timezone
+aldeed:autoform-bs-datetimepicker
